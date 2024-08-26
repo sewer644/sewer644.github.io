@@ -1,0 +1,142 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+}
+
+.ocean {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, #000080, #0077be, #00a6dd);
+    overflow: hidden;
+    z-index: -1;
+}
+
+.resume-container {
+    position: relative;
+    z-index: 1;
+    color: white;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin-top: 50px;
+    overflow-y: auto;
+    height: calc(100% - 100px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resume-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+}
+
+.resume-container h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s;
+}
+
+.resume-container h2 {
+    font-size: 1.8rem;
+    margin-top: 20px;
+    animation: fadeInUp 1s;
+}
+
+.resume-container p, .resume-container ul {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    animation: fadeIn 1s;
+}
+
+.resume-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.resume-container ul li::before {
+    content: '➤';
+    margin-right: 10px;
+    color: #007BFF;
+}
+
+.creature {
+    position: absolute;
+    pointer-events: none;
+    transition: transform 0.5s ease-out;
+}
+
+.fish { width: 80px; height: 80px; }
+.jellyfish { width: 60px; height: 80px; }
+.octopus { width: 120px; height: 120px; }
+.shark { width: 200px; height: 100px; }
+.turtle { width: 120px; height: 80px; }
+
+.seaweed {
+    position: absolute;
+    bottom: 0;
+    width: 50px;
+    height: 200px;
+    animation: sway 5s ease-in-out infinite;
+}
+
+@keyframes sway {
+    0%, 100% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+}
+
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle at 33% 33%, #ffffff, #7fdfff);
+    animation: rise linear infinite;
+}
+
+@keyframes rise {
+    0% { transform: translateY(0) scale(1); opacity: 0; }
+    50% { opacity: 0.8; }
+    100% { transform: translateY(-100vh) scale(2); opacity: 0; }
+}
+
+.coral {
+    position: absolute;
+    bottom: 0;
+    width: 100px;
+    height: 80px;
+}
+
+.sunbeam {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 0%, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 60%);
+    animation: pulse 8s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 0.5; }
+}
+
+#foodParticles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.food-particle {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: #FFD700;
+    border-radius: 50%;
+    opacity: 0.8;
+}

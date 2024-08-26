@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мое резюме</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="ocean" id="ocean">
+        <div class="sunbeam"></div>
+        <div id="foodParticles"></div>
+    </div>
+
+    <div class="resume-container animate__animated animate__fadeIn">
+        <h1 class="animate__animated animate__fadeInDown">Іван Іванов</h1>
+        <h2 class="animate__animated animate__fadeInUp">Контактна інформація</h2>
+        <p class="animate__animated animate__fadeIn">Email: <a href="mailto:ivan.ivanov@example.com">ivan.ivanov@example.com</a></p>
+        <p class="animate__animated animate__fadeIn">Телефон: +38 (099) 123-45-67</p>
+        <p class="animate__animated animate__fadeIn">LinkedIn: <a href="https://linkedin.com/in/ivan-ivanov">linkedin.com/in/ivan-ivanov</a></p>
+
+        <h2 class="animate__animated animate__fadeInUp">Освіта</h2>
+        <p class="animate__animated animate__fadeIn">Бакалавр інформатики, Київський національний університет, 2015-2019</p>
+
+        <h2 class="animate__animated animate__fadeInUp">Навички</h2>
+        <ul class="animate__animated animate__fadeIn">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>Git</li>
+        </ul>
+
+        <h2 class="animate__animated animate__fadeInUp">Досвід роботи</h2>
+        <h3 class="animate__animated animate__fadeIn">Веб-розробник, IT-компанія "Рога і Копита", Київ</h3>
+        <p class="animate__animated animate__fadeIn"><strong>Серпень 2019 - по теперішній час</strong></p>
+        <ul class="animate__animated animate__fadeIn">
+            <li>Розробка та підтримка корпоративних веб-сайтів</li>
+            <li>Участь у розробці веб-додатків з використанням HTML, CSS та JavaScript</li>
+            <li>Впровадження нових функцій та оптимізація існуючих</li>
+        </ul>
+
+        <h2 class="animate__animated animate__fadeInUp">Проекти</h2>
+        <h3 class="animate__animated animate__fadeIn">Проект "Екосистема океану"</h3>
+        <p class="animate__animated animate__fadeIn">Інтерактивна анімована симуляція океану з різними морськими істотами, створена за допомогою HTML, CSS та JavaScript.</p>
+    </div>
+
+    <!-- SVG Templates -->
+    <svg style="display:none;">
+        <defs>
+            <g id="fish-template">
+                <path d="M70 50 C90 30 90 70 70 50 L30 30 C10 40 10 60 30 70 Z" fill="#FFD700"/>
+                <circle cx="75" cy="50" r="3" fill="black"/>
+            </g>
+            <g id="jellyfish-template">
+                <path d="M50 10 C70 10 80 30 80 50 C80 70 70 80 50 80 C30 80 20 70 20 50 C20 30 30 10 50 10 Z" fill="#FF69B4" opacity="0.7"/>
+                <path d="M30 80 Q40 95 50 80 Q60 95 70 80" fill="none" stroke="#FF69B4" stroke-width="2"/>
+                <path d="M35 80 Q45 100 55 80 Q65 100 75 80" fill="none" stroke="#FF69B4" stroke-width="2"/>
+            </g>
+            <g id="octopus-template">
+                <ellipse cx="100" cy="80" rx="60" ry="50" fill="#FF4500"/>
+                <circle cx="80" cy="60" r="10" fill="white"/>
+                <circle cx="80" cy="60" r="5" fill="black"/>
+                <circle cx="120" cy="60" r="10" fill="white"/>
+                <circle cx="120" cy="60" r="5" fill="black"/>
+                <path class="tentacle" d="M60 100 Q40 150 60 200" fill="none" stroke="#FF4500" stroke-width="10"/>
+                <path class="tentacle" d="M80 110 Q70 160 90 200" fill="none" stroke="#FF4500" stroke-width="10"/>
+                <path class="tentacle" d="M100 115 Q100 160 100 200" fill="none" stroke="#FF4500" stroke-width="10"/>
+                <path class="tentacle" d="M120 110 Q130 160 110 200" fill="none" stroke="#FF4500" stroke-width="10"/>
+                <path class="tentacle" d="M140 100 Q160 150 140 200" fill="none" stroke="#FF4500" stroke-width="10"/>
+            </g>
+            <g id="shark-template">
+                <path d="M10 50 L50 10 L190 50 L50 90 Z" fill="#808080"/>
+                <circle cx="30" cy="50" r="5" fill="black"/>
+                <path d="M50 10 L70 0 L70 20 Z" fill="#808080"/>
+            </g>
+            <g id="turtle-template">
+                <ellipse cx="60" cy="50" rx="50" ry="30" fill="#008000"/>
+                <circle cx="100" cy="50" r="10" fill="#008000"/>
+                <path d="M10 50 Q30 30 50 50 Q70 70 90 50" fill="none" stroke="#006400" stroke-width="5"/>
+            </g>
+            <g id="seaweed-template">
+                <path d="M50 400 Q60 300 40 200 Q60 100 50 0" fill="none" stroke="#00a86b" stroke-width="10"/>
+            </g>
+            <g id="coral-template">
+                <path d="M10 80 Q30 0 50 80 Q70 40 90 80" fill="none" stroke="#FF7F50" stroke-width="10" stroke-linecap="round"/>
+            </g>
+        </defs>
+    </svg>
+
+    <script src="script.js"></script>
+</body>
+</html>
